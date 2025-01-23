@@ -27,7 +27,7 @@ def lade_kundendaten_und_positionen(dateiname):
         'Strasse': 'Ihre Straße',
         'PLZ': '1234',
         'Ort': 'Ihre Stadt',
-        'IBAN': 'CH5800791123000889012'
+        'IBAN': 'CH9300762011623852957'  # Test-IBAN, die das Format erfüllt
     }
 
     ws_kunde = wb['Kunden']
@@ -224,7 +224,8 @@ if __name__ == "__main__":
     os.makedirs(rechnungen_ordner, exist_ok=True)
     
     try:
-        excel_pfad = os.path.join('C:\\', 'Users', 'Micooo', 'OneDrive', 'Automatische Rechnung', 'Rechnungsdaten.xlsx')
+        # Verwende die bereits existierende Beispieldaten.xlsx
+        excel_pfad = os.path.join('C:\\', 'Users', 'Micooo', 'OneDrive', 'Automatische Rechnung', 'Beispieldaten.xlsx')
         firmendaten, kundendaten_liste, positionen = lade_kundendaten_und_positionen(excel_pfad)
         
         unique_dates = set(pos['Datum'].strftime('%Y%m%d') for pos in positionen)
