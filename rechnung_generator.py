@@ -24,7 +24,7 @@ def lade_kundendaten_und_positionen(dateiname):
     
     firmendaten = {
         'Name': 'Michael Vogel',
-        'Strasse': 'Ihre Straße',
+        'Strasse': 'Ihre Strasse',
         'PLZ': '1234',
         'Ort': 'Ihre Stadt',
         'IBAN': 'CH9300762011623852957'  # Test-IBAN, die das Format erfüllt
